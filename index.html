@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Item Calculation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Item Calculation</h1>
+  </header>
+  
+  <main>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Item Name</th>
+          <th>Box (B)</th>
+          <th>Box Nos (C)</th>
+          <th>Box Nos Input (D)</th>
+          <th>Total Patti (E)</th>
+          <th>Remaining Patti (F)</th>
+          <th>Patti Adjustment (G)</th>
+          <th>RS/Total (H)</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Repeatable rows for different items -->
+        <tr>
+          <td>1</td>
+          <td>135GM*24 CRUNCHEM CREAM & ONION WAFERS</td>
+          <td><input type="number" id="box1"></td>
+          <td><input type="text" id="boxNos1" readonly></td>
+          <td><input type="number" id="boxNosInput1"></td>
+          <td><input type="text" id="totalPatti1" readonly></td>
+          <td><input type="text" id="remainingPatti1" readonly></td>
+          <td><input type="text" id="pattiAdjustment1" readonly></td>
+          <td><input type="text" id="rsTotal1" readonly></td>
+          <td>
+            <button class="btn downloadPdfBtn" data-row="1">Download PDF</button>
+            <!-- <button class="btn printBtn" data-row="1">Print</button> -->
+          </td>
+        </tr>
+        <!-- Additional rows... -->
+         
+      <tr>
+        <td>2</td>
+        <td>15GM*192 CRUNCHEM MASALA MASTI WAFERS</td>
+        <td><input type="number" id="box2"></td>
+        <td><input type="text" id="boxNos2" readonly></td>
+        <td><input type="number" id="boxNosInput2"></td>
+        <td><input type="text" id="totalPatti2" readonly></td>
+        <td><input type="text" id="remainingPatti2" readonly></td>
+        <td><input type="text" id="pattiAdjustment2" readonly></td>
+        <td><input type="text" id="rsTotal2" readonly></td>
+        <td>
+          <button class="btn downloadPdfBtn" data-row="2">Download PDF</button>
+          <!-- <button class="btn printBtn" data-row="2">Print</button> -->
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+    <button class="btn" id="downloadAllButton">Download All PDF</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Item Calculation | All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
